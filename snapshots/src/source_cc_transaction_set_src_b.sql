@@ -1,4 +1,4 @@
-{% snapshot source_cc_transaction_set %}
+{% snapshot source_cc_transaction_set_src_b %}
 
 {{
     config(
@@ -10,6 +10,8 @@
     )
 }}
 
-select * from {{ source('dev_nat', 'cc_transaction_set') }}
+select 
+updatetime as tst,
+* from {{ source('dev_nat', 'cc_transaction_set_src_b') }}
 
 {% endsnapshot %}

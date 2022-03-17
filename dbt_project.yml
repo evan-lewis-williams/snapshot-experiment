@@ -18,6 +18,6 @@ clean-targets:
 
 models:
   jaffle_shop:
-      materialized: table
+      materialized: incremental
       staging:
         materialized: view

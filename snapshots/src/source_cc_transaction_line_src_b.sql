@@ -1,4 +1,4 @@
-{% snapshot source_cc_transaction %}
+{% snapshot source_cc_transaction_line_src_b %}
 
 {{
     config(
@@ -10,6 +10,6 @@
     )
 }}
 
-select * from {{ source('dev_nat', 'cc_transaction') }}
+select * from {{ source('dev_nat', 'cc_transaction_line_src_b') }}
 
 {% endsnapshot %}
